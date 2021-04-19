@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clase #4 - Condicionales</title>
+</head>
+<body>
+    <script>
+        // Hagamos un programa que verifique si un estudiante puede entrar al curso
+        // Para poder entrar, debe tener una edad mínima de 17 años.
+        
+        var nombre = prompt("Ingrese su nombre");
+        // Recordar que prompt nos retorna una cadena (string)
+        var edad = prompt("Ingrese su edad");
+        // debemos convertir la cadena obtenida con prompt, a un numero
+        // para esto usamos la funcion parseInt()
+        edad = parseInt(edad);
+
+        if (edad >= 17){    // cabezal del if
+            // Bloque if:
+            alert("Bienvenid@ " + nombre + " al curso de Programación");
+        } else {    // el programa entrará al bloque else, si la condición del if el falsa
+            // bloque else, asociado al if anterior.
+            alert("Usted no puede entrar a el curso.");
+        } // fin else
+
+
+    </script>
+
+    <script>
+        // mismo código de arriba pero mas limpio:
+
+        const nombre = prompt("Ingrese su nombre");
+        const edad = parseInt(prompt("Ingrese su edad"));
+
+        if (edad > 16) {
+            alert("Bienvenid@ " + nombre + " al curso de Programación");
+        } else {
+            alert("Usted no puede entrar a el curso.");
+        }
+
+    </script>
+
+</body>
+</html>
