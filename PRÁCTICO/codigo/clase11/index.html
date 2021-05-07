@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio</title>
+</head>
+<body>
+    <script>
+        // declaro un array vacio para ir agregando los objetos:
+        const datos = [];
+
+        for (let i = 1; i <= 2; i++) {
+            alert("Estudiante Nro. " + (i));
+            const nombre = prompt("Ingrese su nombre");
+            const carrera = prompt("Ingrese su carrera");
+            const aprobadas = parseInt(prompt("Cantidas de aprobadas"));
+            const reprobadas = parseInt(prompt("Cantidas de reprobadas"));
+            // con push agregamos un elemento al array
+            datos.push({
+                nombreCompleto: nombre,
+                carrera: carrera,
+                cantidadAprobadas: aprobadas,
+                cantidadReprobadas: reprobadas
+            });
+        } // cierre for
+
+        // ahora recorreremos el array asociativo para mostrar cada elemento:
+        for (let alumno of datos) {
+
+            const salida = "Nombre: " + alumno.nombreCompleto
+                + ", Carrera: " + alumno.carrera
+                + ", aprobadas: " + alumno.cantidadAprobadas
+                + ", reprobadas: " + alumno.cantidadReprobadas;
+
+            alert(salida);
+        }
+
+    </script>
+</body>
+</html>
