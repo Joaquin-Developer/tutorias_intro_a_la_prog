@@ -7,6 +7,49 @@
     <title>Arrays Asociativos - Parte II</title>
 </head>
 <body>
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
+<script>
+const estudiantes = [
+    {
+        nombre: "Antonio Perez",
+        cursos: ["Ingeniería", "Intro a la Prog"],
+        solicitarEntrevista: function() {
+            console.log("Solicitud enviada...")
+        }
+    },
+    {
+        nombre: "Ana Barrios",
+        cursos: ["Arquitectura", "Curso de Excel"],
+        solicitarEntrevista: function() {
+            console.log("Solicitud enviada...")
+        }
+    },
+    {
+        nombre: "Jose Rodríguez",
+        cursos: [],
+        solicitarEntrevista: function() {
+            console.log("Solicitud enviada...")
+        }
+    }
+];
+
+function solicitarEntrevistaCursantesIngenieria()
+{
+    // recorrer el array de estudiantes
+    for (let est of estudiantes)
+    {
+        // recorrer el array cursos del objeto est
+        for (let curso of est.cursos) {
+            if (curso === "Ingeniería") {
+                console.log("Solicitando entrevista para " + est.nombre);
+                est.solicitarEntrevista();
+            }
+        }
+    }
+}
+
+solicitarEntrevistaCursantesIngenieria();
+
+</script>
 </body>
 </html>
