@@ -7,7 +7,7 @@ class Persona {
         this.sexo = sexo;
         this.añoIngreso = añoIngreso;
     }
-
+    
     toString() {
         return `<b>Nombre:</b> ${this.nombre} ${this.apellido} <br>
             <b>Sexo:</b> ${this.sexo} <br>
