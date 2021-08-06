@@ -4,7 +4,7 @@
  */
 const removeAlert = () => {
     let container = document.getElementsByClassName('container')[1]
-    let alertElement = document.getElementsByClassName("alert-dismissible alert-warning")[0]
+    let alertElement = document.getElementsByClassName("alert-warning")[0]
     container.removeChild(alertElement);    
 }
 
@@ -49,7 +49,6 @@ const insertInputSubtotal = () => {
     divFormGroup.classList.add("form-group");
     // create a label:
     let labelSubTotal = document.createElement("label");
-    labelSubTotal.for = "inputSubTotal";
     labelSubTotal.classList.add("form-label", "mt-4");
     labelSubTotal.appendChild(document.createTextNode("Sub Total:"));
     // create a new input:
