@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Ventas</title>
+    <!-- Bootstrap CSS: -->
+    <link rel="stylesheet" href="https://bootswatch.com/5/yeti/bootstrap.css">
+    <!-- Bootstrap JavaScript: -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Gestión de Ventas</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
+                aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Inicio
+                            <span class="visually-hidden">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">Mis Ventas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">Administración</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link">Sign In</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Sign Un</a>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container p-5">
+        <div class="alert alert-dismissible alert-warning">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <h4 class="alert-heading">¡Atención!</h4>
+            <p class="mb-0">El sistema está experimentando fallas! Se recomienda verificar que las ventas se hayan
+                guardado correctamente a la base de datos.</p>
+        </div>
+        <!-- Accordion element: -->
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Acerca de la empresa:
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, quasi quaerat consequatur
+                        voluptatum doloremque vitae non quos nesciunt omnis exercitationem enim eligendi veniam sint,
+                        vel possimus quo impedit dolore optio!
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt sint qui dolorum iste,
+                        tempora architecto quam nulla animi molestias culpa magni aut debitis minima ab molestiae
+                        pariatur quod dicta accusamus?
+                    </div>
+                </div>
+            </div>
+        </div> <!-- End Accordion -->
+        <br>
+        <hr>
+        <form id="form_nueva_venta">
+            <fieldset>
+                <legend>Ingresar una Venta:</legend>
+                <div class="form-group">
+                    <label for="inputNameClient" class="form-label mt-4">Nombre del Cliente</label>
+                    <input type="text" class="form-control" id="inputNameClient" placeholder="Nombre completo">
+                </div>
+
+                <div class="form-group">
+                    <label for="textAreaDescription" class="form-label mt-4">Descripción de la venta:</label>
+                    <textarea class="form-control" id="textAreaDescription" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="inputPrice" class="form-label mt-4">Precio Total:</label>
+                    <input type="text" class="form-control" id="inputPrice">
+                </div><br>
+                <div class="d-grid gap-2">
+                    <button id="btnSave" class="btn btn-lg btn-primary" type="button">GUARDAR</button>
+                </div>
+            </fieldset>
+        </form>
+
+    </div>
+    <br>
+    <footer>
+        <div class="container">
+            <figure>
+                <blockquote class="blockquote">
+                    <p class="mb-0">Copyright | 2020 - Todos los derechos reservados.</p>
+                </blockquote>
+            </figure>
+        </div>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
