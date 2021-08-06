@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manejo de Eventos en JS</title>
+</head>
+<body>
+    <h2>Eventos en JavaScript</h2>
+    <hr>
+    <button id="boton">Dame click</button>
+
+    <script>
+        let button = document.getElementById('boton');
+
+        button.addEventListener('click', (event) => {
+
+            alert("Me diste click :)");
+
+        })
+    </script>
+</body>
+</html>

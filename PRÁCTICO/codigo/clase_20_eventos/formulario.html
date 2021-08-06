@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <h2>Formulario de Reclamos</h2>
+    <form>
+        <label for="nombre">Nombre completo:</label><br>
+        <input type="text" id="name"><br>
+        <label for="correo">Correo:</label><br>
+        <input type="email" id="mail"><br>
+        <p>Seleccionar opcion:</p>
+        <select id="priority">
+            <option value="1" selected>Reclamo Urgente</option>
+            <option value="2">Reclamo no urgente</option>
+            <option value="3">Reclamo atrasado (sin respuestas)</option>
+        </select>
+
+        <p>Mensaje:</p>
+        <textarea cols="23" rows="5"></textarea> <br>
+        <button id="btnSend">Enviar reclamo</button>
+    </form> 
+    <script src="script.js"></script>
+</body>
+
+</html>
