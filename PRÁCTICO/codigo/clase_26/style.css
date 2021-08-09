@@ -1,0 +1,45 @@
+
+table, th, td {
+    /* border: 1px solid black; */
+    border-collapse: collapse;
+    text-align: left;
+}
+
+table {
+    width: 100%;
+    margin-top: 30px;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #A9AEC7;
+}
+
+.miTabla {
+    margin: 35px;
+}
+
+th {
+    background-color: #04AA6D;
+    color: white;
+}
+
+tr:hover { background-color: #bfe9b5; }
+
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    margin: 35px;
+}
+
+
+/* th { */
+    /* Puede ponerse otro valor != 50 */
+    /* height: 50px;    */
+/* } */
+
+/* EN css los comentarios son así */
+
