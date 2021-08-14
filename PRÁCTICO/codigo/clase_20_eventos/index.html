@@ -10,13 +10,14 @@
     <button id="boton">Dame click</button>
 
     <script>
-        let button = document.getElementById('boton');
+        const boton = document.getElementById("boton");
 
-        button.addEventListener('click', (event) => {
-
-            alert("Me diste click :)");
-
+        boton.addEventListener("dblclick", (event) => {
+            console.log("Me diste click");
         })
+
+
     </script>
+
 </body>
 </html>

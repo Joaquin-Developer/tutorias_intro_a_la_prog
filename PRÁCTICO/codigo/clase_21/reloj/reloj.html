@@ -6,6 +6,23 @@
 </head>
 <body>
     <div class="reloj"></div>
-    <script src="codigo.js"></script>
+
+    <style>
+        .reloj {
+            font-size: 70px;
+            text-align: center;
+        }
+    </style>
+
+    <script>
+        const div = document.getElementsByClassName("reloj")[0];
+
+        
+
+        setInterval(() => {
+            div.innerHTML = new Date().toLocaleTimeString()
+        }, 1000)
+
+    </script>
 </body>
 </html>

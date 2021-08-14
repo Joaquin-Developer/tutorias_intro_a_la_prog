@@ -67,7 +67,7 @@ const insertInputSubtotal = () => {
  * Ej5. Agregar un boton que diga "Limpiar", detras del boton de guardar venta
  */
 
-const insertCearButton = () => {
+const insertClearButton = () => {
     const form = getForm();
     const clearButton = document.createElement("button");
     clearButton.appendChild(document.createTextNode("LIMPIAR"));

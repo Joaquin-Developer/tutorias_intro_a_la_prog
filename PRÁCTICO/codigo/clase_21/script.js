@@ -1,8 +1,18 @@
 
-const boton = document.getElementById('btnEnviar');
+const btnEnviar = document.getElementById("btnEnviar");
 
-boton.addEventListener('click', (evt) => {
-    evt.preventDefault();
-    console.log("Este mensaje no se volverá a mostrar :)");
-}, { once: true });
+const buttonEventHandler = (event) => {
+    event.preventDefault();
+    alert("Formulario enviado...");
 
+}
+
+btnEnviar.addEventListener("click", buttonEventHandler, { once: true });
+
+function loadEventHandler() {
+    console.log("Hola");
+}
+
+addEventListener("load", (event) => {
+    setInterval(loadEventHandler, 2000);
+})

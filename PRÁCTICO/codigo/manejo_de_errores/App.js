@@ -1,26 +1,25 @@
 
-// >
+const boton = document.getElementById("btnSuma");
+const divResultado = document.getElementsByClassName("resultado")[0];
+const inputA = document.getElementById("numeroA");
+const inputB = document.getElementById("numeroB");
 
 function suma(a, b) {
-    if (typeof a === "number" && typeof b === "number") 
+    if ((typeof a == "number" && typeof b == "number") && !(isNaN(a) || isNaN(b)))
         return a + b;
-    
-    throw TypeError("Debe ingresar numeros!")
+    throw TypeError("Debe ingresar números!");
+
 }
 
-
-button.addEventListener("click", (evt)=> {
+boton.addEventListener("click", () => {
     try {
-        let a = document.getElementById("num_a").value;
-        let b = document.getElementById("num_b").value;
-        let resultado = suma(a, b);
-        divResultado.innerHTML = `Resultado: ${resultado} `
-
+        let resultado = suma(parseInt(inputA.value), parseInt(inputB.value));
+        divResultado.innerHTML = `Resultado: ${resultado}`;
+        
     } catch (error) {
         console.error(error);
         alert(error.message);
     }
 
 })
-
 

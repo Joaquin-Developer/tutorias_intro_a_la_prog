@@ -1,17 +1,19 @@
-const button = document.getElementById('btnSend');
+const button = document.getElementById("btnSend");
 
-button.addEventListener('mouseout', () => {
-    console.log("cursor sale")
+button.addEventListener("mouseout", () => {
+    console.log("Cursor sale del boton");
 })
 
-button.addEventListener('mouseover', ()=> {
-    console.log("cursor entra")
+button.addEventListener("mouseover", () => {
+    console.log("Cursor entra al boton");
 })
 
-/**
- * Prevent default
- */
-button.addEventListener('click', (event)=> {
-    event.preventDefault();
-    console.log("Formulario enviado");
+document.getElementById("mail").addEventListener("focus", () => {
+    console.log("Obtuve el foco")
+})
+
+
+button.addEventListener("click", (evt) => {
+    evt.preventDefault();
+    alert("Formulario enviado");
 })
