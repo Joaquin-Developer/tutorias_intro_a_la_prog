@@ -5,6 +5,31 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="app.js"></script>
+    <!-- <script src="app.js"></script> -->
+<script>
+
+const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("Datos obtenidos del servidor. (Promesa 1)");
+    }, 3000)
+
+    setTimeout(() => {
+        reject("Error: NO se pudieron obtener lo datos (Promesa 1)")
+    }, 7000)
+
+});
+
+(async function obtenerDatos() {
+    try {
+        const data = await promise;
+        console.log(data);
+    } catch (error) {
+        console.error(error);
+    }
+})();
+
+
+
+</script>    
 </body>
 </html>

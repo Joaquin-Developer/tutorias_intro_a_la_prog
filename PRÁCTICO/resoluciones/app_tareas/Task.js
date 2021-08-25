@@ -28,6 +28,7 @@ class Task {
         label.classList.add("form-check-label");
         label.for = inputCheck.id;
         label.appendChild(document.createTextNode(task.name));
+        label.addEventListener("dblclick", new Task().#event_removeTask);
         
         if (task.finished) {
             label.classList.add("line-through");
@@ -36,6 +37,15 @@ class Task {
         liTask.appendChild(inputCheck);
         liTask.appendChild(label);
         document.getElementById("all_tasks").appendChild(liTask);
+    }
+
+    #event_removeTask(evt) {
+        if (confirm("¿Seguro que deseas eliminar la tarea?")) {
+            // label.parentElement.parentElement.removeChild(label.parentElement)
+            /**
+             * Seguir...
+             */
+        }
     }
 
     #event_updateTaskStatus(evt) {
